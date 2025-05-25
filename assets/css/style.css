@@ -1,4 +1,69 @@
-body {
-    background: green;
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+/* Asterisk wildcard selector to override default styles added to the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    color: white;
+    font-family: "Stalinist One", Static;
+}
+
+/* Header */
+header {
+    background-color: blue;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    color: white;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: blue;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    display: none;
+    top: 100%;
+}
+
+/* Main content */
+main {
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+/* Footer */
+#social-networks {
+    background-color: blue;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none; 
+}
+
+#social-networks i {
+    font-size: 160%; 
+    padding: 5%;
+    color: white;
+ }
 
