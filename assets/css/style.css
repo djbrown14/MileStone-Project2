@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
 
 /* Asterisk wildcard selector to override default styles added to the browser */
 * {
@@ -11,15 +11,17 @@
 /* General Styles */
 body {
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column; 
+    /* Generic project styles */
+    font-family: "Iceberg", static;
     color: white;
-    font-family: "Stalinist One", Static;
 }
 
 /* Header */
 header {
-    background-color: blue;
+    background-color: rgb(55, 55, 243);
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
@@ -29,6 +31,25 @@ header {
     align-items: baseline;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
 .logo {
     color: white;
 }
@@ -36,7 +57,7 @@ header {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color: blue;
+    background-color: rgb(55, 55, 243);
     width: 100%;
     left: 0;
     padding: 0 1rem;
@@ -44,16 +65,91 @@ nav {
     top: 100%;
 }
 
+/*Nav toogle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
 /* Main content */
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    background-color: lightskyblue;
+    color: white;
+}
+
+/* Score board */
+.score-board {
+    margin: 5px auto;
+    width: 30%;
+    font-size: 1.2rem;
+}
+
+#score {
+    color: navy;
+    font-weight: bold;
+}
+
+#moves {
+    color: orangered;
+    font-weight: bold;
+}
+
+/* Game section */
+.memory-game {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 3px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.memory-card:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(55, 55, 243);
+  backface-visibility: hidden;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
 }
 
 /* Footer */
 #social-networks {
-    background-color: blue;
+    background-color: rgb(55, 55, 243);
     text-align: center;
     padding: 20px 0;
     display: flex;
