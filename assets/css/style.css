@@ -128,8 +128,8 @@ main {
 }
 
 .memory-card:active {
-    transform: scale(0.95);
-    transition: transform 0.1s;
+    transform: scale(0.97);
+    transition: transform 0.2s;
 }
 
 .front-face,
@@ -144,6 +144,10 @@ main {
 }
 
 .memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face {
     transform: rotateY(180deg);
 }
 
