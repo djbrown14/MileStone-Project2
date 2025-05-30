@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('card');
+const cards = document.querySelectorAll('.card');
 
 let matchedCard = 0;
 let cardOne, cardTwo;

@@ -98,7 +98,7 @@ h2 {
 
 p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     padding: 20px;
 }
@@ -179,18 +179,20 @@ p {
 }
 
 /* Button */
-.actions {
+.start-game {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.actions button {
-    background-color: rgb(55, 55, 243);
-    color: white;
-    padding: 8px 16px;
-    font-size: 30px;
-    border-radius: 5px;
+#instructions {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px auto;
 }
 
 /* Footer */
@@ -208,4 +210,71 @@ p {
     padding: 5%;
     color: white;
  }
+
+ /* Media query: phones and smaller devices */
+ @media screen and (min-width: 576px) {
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 50px;
+    }
+
+    .memorygame {
+        width: 400px;
+        height: 400px;
+    }
+
+    .card {
+        width: calc(25% - 10px);
+        height: calc(33.333% - 10px);
+    }
+
+    .score-board {
+        width: 60%;
+    }
+
+ } 
+ 
+ 
+ /* tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    menu {
+        display: flex;
+    }
+
+    .memorygame {
+        width: 450px;
+        height: 450px;
+    }
+
+    .card {
+        width: calc(25% - 10px);
+        height: calc(33.333% - 10px);
+    }
+
+    .score-board {
+        width: 40%;
+    }
+
+    /* Larger devices (laptops and desktop, 992px and up) */
+    @media screen and (min-width: 992px) {
+        #menu a:hover {
+            border-bottom: 1px solid rgb(55, 55, 243);
+        }
+
+        .memorygame {
+            width: 500px;
+            height: 500px;
+        }
+
+        .card {
+            width: calc(25% - 10px);
+            height: calc(33.333% - 10px);
+        }
+
+        .score-board {
+            width: 25%;
+        }
+    }
+}
 
