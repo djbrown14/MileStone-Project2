@@ -122,7 +122,7 @@ p {
     perspective: 1000px;
 }
 
-.memorycard {
+.card {
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
     margin: 5px;
@@ -130,36 +130,33 @@ p {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    justify-content: center;
-    align-items: center;
 }
 
-.memorycard:active {
+.card:active {
     transform: scale(0.95);
     transition: transform 0.2s;
-}
-
-.memorycard .frontface {
-    transform: rotateY(180deg);
 }
 
 .frontface,
 .backface {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   border-radius: 5px;
   background: rgb(55, 55, 243);
-  backface-visibility: hidden;
 }
 
-.backface img {
-    max-width: 45px;
+.card .backface {
+    transform: rotateY(-180deg);
 }
 
-.memorycard:hover .backface {
+.card:hover .backface {
     transform: rotateY(0deg);
+}
+
+.card:hover .frontface {
+    transform: rotateY(180deg);
 }
 
 /* Button */

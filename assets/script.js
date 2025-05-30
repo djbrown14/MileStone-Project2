@@ -1,67 +1,68 @@
-  const cards = document.querySelectorAll('.memorycard');
+const cards = document.querySelectorAll('.card');
 
-  let hasFlippedCard = false;
-  let lockBoard = false;
-  let firstCard, secondCard;
+let matchedCard = 0;
+let cardOne, cardTwo;
+let disableDeck = false;
 
-  function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
-
-    this.classList.add('flipped');
-
-    if (!firstCard) {
-      firstCard = this;
-      return;
+function flipCard(e) {
+    // getting the clicked card
+    let clickedCard = e.target;
+    if (clickedCard = cardOne && !disableDeck) {
+        clickedCard.classList.add('flip');
+        if (!cardOne) {
+            // return the cardOne value to clickedCard
+            return (cardOne = clickedCard);
+        }
     }
 
-    secondCard = this;
-    score++;
-    document.querySelector('.score').textContent = score;
-    lockBoard = true;
+    cardTwo = clickedCard;
+    disableDeck = true;
 
-    checkForMatch();
-  }
+    let cardOneImg = cardOne.querySelector('img').src;
+        cardTwoImg = cardTwo.querySelector('img').src;
+    matchCards(cardOneImg, cardTwoImg);
+}
 
-  function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards();
-  }
+function matchCards(img1, img2) {
+    if (img1 === img2) {
+        // increment matched value by 1
+        matchCard++
+        if (matchedCard == 6) {
+            // shuffle function 1 sec
+            setTimeout(() => {
+              shuffleCard();  
+            }, 1000);
+        }
+        cardOne.removeEventListener('click', 'flipCard');
+        cardTwo.removeEventListener('click', 'flipCard');
 
-  function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+        cardOne = cardTwo = '';
+        return (disableDeck = false);
+    }
+}
 
-    resetBoard();
-  }
+function shuffleCard() {
+    matchedCard = 0;
+    cardOne = cardTwo = '';
+    disableDeck = false;
 
-  function unflipCards() {
-    setTimeout(() => {
-      firstCard.classList.remove('flipped');
-      secondCard.classList.remove('flipped');
-      resetBoard();
-    }, 1000);
-  }
 
-  function resetBoard() {
-    firstCard = null;
-    secondCard = null;
-    lockBoard = false;
-  }
+    let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+    arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
-  function restart() {
-    resetBoard();
-    shuffleCards();
-    score = 0;
-    document.querySelector('.score').textContent = score;
-    grid
-  }
+    card.forEach((card, i) => {
+        card.classList.remove('flip');
+        let imgTag = card.querySelector('.backface img')
+        imgTag.src = `img/img-${arr[i]}.webp`;
+        // Add Event Listener to all cards
+        card.addEventListener('click', flipCard);
+    });
+}
 
- (function shuffle() {
-   cards.forEach(card => {
-     let ramdomPos = Math.floor(Math.random() * 12);
-     card.style.order = ramdomPos;
-   });
- })();
+shuffleCard();
 
-  cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => {
+    // card.classList.add('flip');
+    // Add Event Listener to all cards
+    card.addEventListener('click', flipCard);
+});
