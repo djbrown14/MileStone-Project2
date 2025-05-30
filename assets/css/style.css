@@ -116,6 +116,9 @@ p {
     margin: 5px auto;
     width: 30%;
     font-size: 1.2rem;
+    padding: 20px;
+    background-color: rgba(55, 55, 243, 0.8);
+    
 }
 
 .score {
@@ -135,7 +138,7 @@ p {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px;
+    perspective: 500px;
 }
 
 .card {
@@ -143,9 +146,9 @@ p {
     height: calc(33.333% - 10px);
     margin: 5px;
     position: relative;
-    transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    backface-visibility: hidden;
 }
 
 .card:active {
@@ -161,17 +164,17 @@ p {
   position: absolute;
   border-radius: 5px;
   background: rgb(55, 55, 243);
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
 }
 
-.card .backface {
-    transform: rotateY(-180deg);
+.frontface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card:hover .backface {
-    transform: rotateY(0deg);
-}
-
-.card:hover .frontface {
+.card.flipped {
     transform: rotateY(180deg);
 }
 
