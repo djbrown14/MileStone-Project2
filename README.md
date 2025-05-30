@@ -7,7 +7,10 @@ My game is for the purpose of the user to have fun and try to play the game with
 
 Wireframes 
 
-
+![home page](<homepage-wireframe.jpg>)
+![game page](<game-wireframe.jpg>)
+![instructions page](<instructions-wireframe.jpg>)
+![robots](listofrobots.jpg)
 
 Features
 
@@ -35,21 +38,25 @@ The instruction page will have all the instructions in number order for the user
 
 Features Left to Implement
 
-General layout with larger screens I was unable to get the contact section and the resume side by side when viewing on a larger device for better use. This is the same for the home page as seen in my wireframes.
+My buttons are not where i would like them on the page. I wanted them at the bottom under the game page.
 
-My service cards looks unappealing on bigger screens My service cards are not formatting in the way i would like when on bigger screens.
+
 
 Testing
 
-I have made my website pleasing to the eye on both mobile and desktop. I have used media queries to change the layout of my website which is pleasing to the eyes. In the portfolio section i have increased the image columns to give the user a better experience.
+I have made a game pleasing to the eye on both mobile and desktop. I have used media queries to change the layout of my website which is pleasing to the eyes. I have change the size of the game area within the different size screens. 
 
 Validator Testing HTML No errors were returned when passing through the official W3C validator as shown by the images below. CSS No errors were found when passing through the official (Jigsaw) validator as shown by the image below.
 
-about validation contact validation index validation portfolio validation success validation CSS validation
 
-Lighthouse Here are the images for my lighthouse score taken for a desktop device. All scores are in the 90% category.
 
-lighthouse score for home page lighthouse score for about page lighthouse score for contact page lighthouse score for portfolio lighthouse score for success page
+Lighthouse 
+
+Here are the images for my lighthouse score taken for a desktop device. All scores are in the 90% category.
+
+![lighthouse score for home page](lighthouse home.html.png)
+![lighthouse score for game page](lighthouse game.png)
+![lighthouse score for instruction page](lighthouse instruction.html.png)
 
 Functional Testing
 
