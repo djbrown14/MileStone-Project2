@@ -100,7 +100,6 @@ p {
     margin: 5px auto;
     width: 30%;
     font-size: 1.2rem;
-    justify-content: left;
 }
 
 .score {
@@ -115,8 +114,8 @@ p {
 
 /* Game section */
 .memorygame {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +130,8 @@ p {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    justify-content: center;
+    align-items: center;
 }
 
 .memorycard:active {
@@ -138,7 +139,7 @@ p {
     transition: transform 0.2s;
 }
 
-.memorycard.flip {
+.memorycard .frontface {
     transform: rotateY(180deg);
 }
 
@@ -149,14 +150,23 @@ p {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
+  background: rgb(55, 55, 243);
   backface-visibility: hidden;
 }
 
+.backface img {
+    max-width: 45px;
+}
+
+.memorycard:hover .backface {
+    transform: rotateY(0deg);
+}
 
 /* Button */
 .actions {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .actions button {
