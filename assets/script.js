@@ -7,8 +7,8 @@ let disableDeck = false;
 function flipCard(e) {
     // getting the clicked card
     let clickedCard = e.target;
-    if (clickedCard = cardOne && !disableDeck) {
-        clickedCard.classList.add('flipped');
+    if (clickedCard === cardOne && !disableDeck) {
+        clickedCard.classList.toggle('flip');
         if (!cardOne) {
             // return the cardOne value to clickedCard
             return (cardOne = clickedCard);
@@ -51,7 +51,7 @@ function shuffleCard() {
     arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
     cards.forEach((card, i) => {
-        card.classList.remove('flipped');
+        card.classList.remove('flip');
         let imgTag = card.querySelector('.backface img')
         imgTag.src = `img/img-${arr[i]}.webp`;
         // Add Event Listener to all cards
