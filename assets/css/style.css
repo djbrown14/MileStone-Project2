@@ -89,10 +89,26 @@ main {
     color: white;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
 p {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    padding: 20px;
+}
+
+.start-game {
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 /* Score board */
