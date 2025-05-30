@@ -100,6 +100,7 @@ p {
     margin: 5px auto;
     width: 30%;
     font-size: 1.2rem;
+    justify-content: left;
 }
 
 .score {
@@ -113,7 +114,7 @@ p {
 }
 
 /* Game section */
-.memory-game {
+.memorygame {
     width: 450px;
     height: 450px;
     margin: auto;
@@ -122,13 +123,20 @@ p {
     perspective: 1000px;
 }
 
-.memory-card {
+.memorycard {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 3px;
   position: relative;
+  transform: scale(1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.memorycard:active {
+    transform: scale(0.95);
+    transition: transform 0.2s;
 }
 
 .frontface,
@@ -142,7 +150,7 @@ p {
   backface-visibility: hidden;
 }
 
-.memory-card.flipped {
+.memorycard.flipped {
   transform: rotateY(180deg);
 }
 
