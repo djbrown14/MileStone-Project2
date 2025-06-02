@@ -27,70 +27,82 @@
             <nav>
                 <ul id="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href=""class="active">Game</a></li>
+                    <li><a href="" class="active">Game</a></li>
                     <li><a href="instruction.html">Instructions</a></li>
                 </ul>
             </nav>
         </header>
-
     <!-- Main Content -->
     <main>
-        <section class="memorygame">
-            <div class="card">
-                <img class="frontface" src="assets/images/img-1.webp" alt="Astro">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory-Card">
+        <div class="memory-game">
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-1.webp" alt="Astro">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory-Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-1.webp" alt="Astro">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-1.webp" alt="Astro">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-2.webp" alt="Baymax">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-2.webp" alt="Baymax">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-2.webp" alt="Baymax">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-2.webp" alt="Baymax">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-3.webp" alt="Bumblebee">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-3.webp" alt="Bumblebee">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-3.webp" alt="Bumblebee">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-3.webp" alt="Bumblebee">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-5.webp" alt="Wall-e">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-5.webp" alt="Wall-e">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-5.webp" alt="Wall-e">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-5.webp" alt="Wall-e">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-6.webp" alt="Wild robot">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-6.webp" alt="Wild robot">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-6.webp" alt="Wild robot">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-6.webp" alt="Wild robot">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-4.webp" alt="R2d2">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-4.webp" alt="R2d2">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-            <div class="card">
-                <img class="frontface" src="assets/images/img-4.webp" alt="R2d2">
-                <img class="backface" src="assets/images/background1.webp" alt="Memory Card">
+
+            <div class="memory-card">
+                <img class="front-face" src="assets/images/img-4.webp" alt="R2d2">
+                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
             </div>
-        </section>
-        <div class="actions">
-            <button id="start-game" class="btn btn-primary" href="game.html" role="button">Restart the Game</button>
+        </div>
+        <div>
+            <button class="start" href="game.html">Start the game</button>
         </div>
         <div class="score-board">
-            <p>Score: <span class="score">0</span></p>
-            <p>Moves: <span class="moves">0</span></p>
+            <div class="score"></div>0 moves</div>
+            <div class="timer">Time : 0 sec</div>
+        </div>
+        <div class="win">You won!</div>
     </main>
 
     <!-- Footer -->

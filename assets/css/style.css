@@ -105,7 +105,6 @@ p {
 
 .start-game {
     text-align: center;
-    align-items: center;
     font-size: 30px;
     padding: 20px;
     margin-top: 20px;
@@ -113,12 +112,14 @@ p {
 
 /* Score board */
 .score-board {
-    margin: 5px auto;
-    width: 30%;
-    font-size: 1.2rem;
+    height: 100px;
+    width: 30px;
+    margin: 20px;
+    font-size: 20px;
     padding: 20px;
     background-color: rgba(55, 55, 243, 0.8);
-    
+    border-radius: 10px;
+    position: absolute;
 }
 
 .score {
@@ -126,66 +127,79 @@ p {
     font-weight: bold;
 }
 
-.moves {
+.timer {
     color: orangered;
     font-weight: bold;
 }
 
 /* Game section */
-.memorygame {
+.memory-game {
     width: 400px;
     height: 400px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 500px;
+    perspective: 1000px;
 }
 
-.card {
+.memory-card {
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
     margin: 5px;
     position: relative;
+    transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
     backface-visibility: hidden;
+    cursor: pointer;
 }
 
-.card:active {
+.memory-card:active {
     transform: scale(0.95);
     transition: transform 0.2s;
+    transform: rotateY(180deg);
 }
 
-.frontface,
-.backface {
+.front-face,
+.back-face {
   width: 100%;
   height: 100%;
   padding: 10px;
   position: absolute;
   border-radius: 5px;
   background: rgb(55, 55, 243);
-  transition: transform 500ms ease-in-out;
   backface-visibility: hidden;
 }
 
-.frontface {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card.flipped {
+.front-face{
     transform: rotateY(180deg);
 }
 
-/* Button */
-.start-game {
-    text-align: center;
-    font-size: 30px;
+.memory-game.flipped .memory-card {
+    transform: rotateY(180deg);
+    transform: rotateZ(50deg);
+}
+
+.win {
+    position: absolute;
+    background-color: rgb(55, 55, 243);
+    font-size: 20px;
+    border-radius: 20px;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    left: 50%
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    background-color: navy;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 100%;
+    position:absolute;
+    left: 50%;
+    border-radius: 10px;
 }
 
 #instructions {
@@ -232,11 +246,9 @@ p {
     .score-board {
         width: 60%;
     }
-
  } 
  
- 
- /* tablets and larger (768px and up) */
+/* tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     menu {
         display: flex;
