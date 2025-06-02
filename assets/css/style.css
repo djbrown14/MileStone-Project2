@@ -175,9 +175,8 @@ p {
     transform: rotateY(180deg);
 }
 
-.memory-game.flipped .memory-card {
+.memory-game.flip .memory-card {
     transform: rotateY(180deg);
-    transform: rotateZ(50deg);
 }
 
 .win {
