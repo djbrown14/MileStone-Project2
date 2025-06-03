@@ -131,7 +131,7 @@ for (var i = 0; i < cards.length; i++) {
         movesDisplay.innerText = `Moves: ${move}`;
         if(winCount===6){
             setTimeout(()=>{
-                alert(`Congratulations!!! You won the game in ${move} moves.`)
+                message(`Congratulations!!! You won the game in ${move} moves.`)
             }, 300)
         }
     })

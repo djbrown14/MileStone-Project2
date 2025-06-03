@@ -112,11 +112,12 @@ p {
 
 /* Score board */
 .score-board {
-    text-align: center;
     display: flex;
     justify-content: space-around;
+    height: 100%;
     width: 100%;
-    margin: 50px 0 20px 0;
+    text-align: center;
+    margin: 20px;
     background-color: rgba(55, 55, 243, 0.8);
 }
 
@@ -127,31 +128,28 @@ p {
 
 /* Game section */
 .memory-game {
+    width: 600px;
+    height: 600px;
+    margin: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    flex-wrap: wrap;
 }
 
 .game-container {
-    width: 800px;
     padding: 20px;
     border-radius: 10px;
-    row-gap: 15px; 
 }
 
 .cards-container {
     display: grid;
     grid-template-rows: 125px 125px 125px;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-gap: 20px 10px;
-    place-items: center;
+    grid-template-columns: 140px 140px 140px 140px;
+    grid-gap: 20px;
 }
 
 .card {
     justify-items: center;
     display: flex;
-    align-items: center;
     position: relative;
     cursor: pointer;
 }
@@ -161,17 +159,16 @@ p {
     border-radius: 10px;
     top: 0;
     left: 0;
-    height: 125px;
-    width: 125px;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
 }
 
-.front-face{
+.front-face {
     height: 125px;
     width: 125px;
     transform: rotateY(90deg); 
     transition: all ease-in 0.25s;
-    mix-blend-mode: multiply;
 }
 
 /* Button */
@@ -191,8 +188,7 @@ p {
 
 /* Dynamic classes that are being added by JavaScript */
 .toggled .front-face { 
-    transform: rotateY(0deg); 
-    transition-delay: 0.25s; 
+    transform: rotateY(180deg); 
 } 
 
 .item .back-face { 
@@ -238,12 +234,17 @@ p {
     }
 
     .memory-game {
-        width: 400px;
-        height: 400px;
+       width: 700px;
+       height: 700px;
     }
 
+    .game-container {
+            width: 50%;
+        }
+
     .score-board {
-        width: 60%;
+        width: 50%;
+        height: 50%;
     }
  } 
  
@@ -254,12 +255,17 @@ p {
     }
 
     .memory-game {
-        width: 450px;
-        height: 450px;
+        width: 800px;
+        height: 800px;
     }
 
+    .game-container {
+            width: 60%;
+        }
+
     .score-board {
-        width: 40%;
+        width: 60%;
+        height: 60%;
     }
 
     /* Larger devices (laptops and desktop, 992px and up) */
@@ -269,22 +275,17 @@ p {
         }
 
         .game-container {
-            width: 100%;
-        }
-
-        .cards-container{
-            grid-template-rows: 125px 125px 125px 125px;
-            grid-template-columns: 33% 33% 33%;
-            grid-gap: 10px 10px;
+            width: 70%;
         }
 
         .memory-game {
-            width: 500px;
-            height: 500px;
+            width: 900px;
+            height: 900px;
         }
 
         .score-board {
-           margin: 10px 0 10px 0; 
+            width: 70%; 
+            height: 70%;
         }
     }
 }
