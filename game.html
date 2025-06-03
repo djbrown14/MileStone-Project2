@@ -32,74 +32,63 @@
     <!-- Main Content -->
     <main>
         <div class="memory-game">
-            <div class="memory-card" data-framework="Astro">
-                <img class="front-face" src="assets/images/astro.webp" alt="Astro">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory-Card">
-            </div>
-
-            <div class="memory-card" data-framework="astro">
-                <img class="front-face" src="assets/images/astro.webp" alt="Astro">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="baymax">
-                <img class="front-face" src="assets/images/baymax.webp" alt="Baymax">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="baymax">
-                <img class="front-face" src="assets/images/baymax.webp" alt="Baymax">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="bumblebee">
-                <img class="front-face" src="assets/images/bumblebee.webp" alt="Bumblebee">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="bumblebee">
-                <img class="front-face" src="assets/images/bumblebee.webp" alt="Bumblebee">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="wall-e">
-                <img class="front-face" src="assets/images/wall-e.webp" alt="Wall-e">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="wall-e">
-                <img class="front-face" src="assets/images/wall-e.webp" alt="Wall-e">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="wild-robot">
-                <img class="front-face" src="assets/images/wild-robot.webp" alt="Wild robot">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="wild-robot">
-                <img class="front-face" src="assets/images/wild-robot.webp" alt="Wild robot">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="r2d2">
-                <img class="front-face" src="assets/images/r2d2.webp" alt="R2d2">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-
-            <div class="memory-card" data-framework="r2d2">
-                <img class="front-face" src="assets/images/r2d2.webp" alt="R2d2">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-        </div>
-        <div>
+            <div id="memory-cards" class="game-container"></div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="1" src="assets/images/astro.webp" alt="Astro" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="2" src="assets/images/baymax.webp" alt="Baymax" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="3" src="assets/images/wild-robot.webp" alt="Wild-robot" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="4" src="assets/images/bumblebee.webp" alt="Bumblebee" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="5" src="assets/images/r2d2.webp" alt="R2d2" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="6" src="assets/images/wall-e.webp" alt="Wall-e" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="7" src="assets/images/astro.webp" alt="Astro" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="8" src="assets/images/baymax.webp" alt="Baymax" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="9" src="assets/images/wild-robot.webp" alt="Wild-robot" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="10" src="assets/images/bumblebee.webp" alt="Bumblebee" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="11" src="assets/images/r2d2.webp" alt="R2d2" class="front-face">
+                </div>
+                <div class="card">
+                    <img src="assets/images/background1.webp" class="back-face">
+                    <img id="12" src="assets/images/wall-e.webp" alt="Wall-e" class="front-face">
+                <div>
+                
             <button class="start" href="game.html">Start the game</button>
         </div>
         <div class="score-board">
-            <div class="score"></div>0 moves</div>
-            <div class="timer">Time : 0 sec</div>
+            <div class="moves"></div>Moves: 0</div>
+            <button id="restart" class="restart-button">Restart Game</button>
         </div>
-        <div class="win">You won!</div>
     </main>
 
     <!-- Footer -->
