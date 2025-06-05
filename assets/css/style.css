@@ -121,11 +121,6 @@ p {
     background-color: rgba(55, 55, 243, 0.8);
 }
 
-.score {
-    color: navy;
-    font-weight: bold;
-}
-
 /* Game section */
 .memory-game {
     width: 600px;
@@ -144,7 +139,7 @@ p {
     display: grid;
     grid-template-rows: 125px 125px 125px;
     grid-template-columns: 140px 140px 140px 140px;
-    grid-gap: 20px;
+    grid-gap: 15px;
 }
 
 .card {
@@ -172,16 +167,16 @@ p {
 }
 
 /* Button */
-.restart-button {
-    background-color: navy;
+.reset-button {
+    background-color: rgb(55, 55, 243);
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 100%;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.restart-button:hover {
+.reset-button:hover {
     background-color: rgba(55, 55, 243, 0.8);
     color: white;
 }
