@@ -196,7 +196,7 @@ p {
     font-size: 100%;
     border-radius: 10px;
     cursor: pointer;
-    left: 40%;;
+    left: 40%;
 }
 
 .restart-button:hover {
@@ -221,7 +221,6 @@ p {
 
 /* Instruction page */
 #game-instructions {
-    background-color: navy;
     color: white;
     border-radius: 15px;
     font-size: 100%;
@@ -234,6 +233,17 @@ p {
     padding: 20px;
     margin: 20px auto;
     right: 30%;;
+}
+
+.restart {
+    background-color: rgb(55, 55, 243);
+    color: #ffffff;
+    padding: 10px;
+    font-size: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    bottom: 50%;
+    left: 40%;
 }
 
 /* Footer */
@@ -250,30 +260,41 @@ p {
     font-size: 160%; 
     padding: 5%;
     color: white;
- }
+}
 
- /* Media query: phones and smaller devices */
- @media screen and (min-width: 576px) {
+/* Media query: phones and smaller devices */
+@media screen and (min-width: 576px) {
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 50px;
     }
 
+    nav {
+        width:auto;
+    }
+
     .memory-game {
-       width: 700px;
-       height: 700px;
+       width: 300px;
+       height: 300px;
+       margin: 5px;
     }
 
     .game-container {
-            width: 50%;
+            width: 30%;
         }
 
     .score-board {
         width: 50%;
         height: 50%;
     }
- } 
+
+    #social-networks i {
+        font-size: 160%; 
+        padding: 5%;
+        color: white;
+    }
+} 
  
 /* tablets and larger (767px and up) */
 @media screen and (min-width: 768px) {
@@ -282,38 +303,32 @@ p {
     }
 
     .memory-game {
-        width: 800px;
-        height: 800px;
+        width: 500px;
+        height: 500px;
+        margin: 10px;
     }
-
-    .game-container {
-            width: 60%;
-        }
 
     .score-board {
         width: 60%;
         height: 60%;
     }
+}
 
-    /* Larger devices (laptops and desktop, 992px and up) */
-    @media screen and (min-width: 992px) {
-        #menu a:hover {
-            border-bottom: 1px solid rgb(55, 55, 243);
-        }
+/* Larger devices (laptops and desktop, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid rgb(55, 55, 243);
+    }
 
-        .game-container {
-            width: 70%;
-        }
+    .memory-game {
+        width: 900px;
+        height: 900px;
+        right: 40%;
+    }
 
-        .memory-game {
-            width: 900px;
-            height: 900px;
-        }
-
-        .score-board {
-            width: 70%; 
-            height: 70%;
-        }
+    .score-board {
+        width: 70%; 
+        height: 70%;
     }
 }
 

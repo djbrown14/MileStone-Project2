@@ -14,7 +14,7 @@ Wireframes
 
 Features
 
-My game has 3 pages. This first is the home page where the user will be able to see the name of the game and a button to take you to the game. At the top of the page there is a navigation bar which will take the user to the other pages. The next page in the navigation bar is the game page. This page will display the game for the user to play as well as a restart button for the user to restart the game if they make a mistake or trying to get the best score. There is also a score board which will have the number of moves you take to complete the game. In the score board there is a score which will only increase once a pair has been made. The third page is a instruction page which shows the user the steps needed to play the game.
+My game has 3 pages. This first is the home page where the user will be able to see the name of the game and a button to take you to the game. At the top of the page there is a navigation bar which will take the user to the other pages. The next page in the navigation bar is the game page. This page will display the game for the user to play as well as a restart button for the user to restart the game if they make a mistake or trying to get the best score. There is also a score board which will have the number of moves you take to complete the game. In the score board there is a score which will only increase once a pair has been made. The third page is a instruction page which shows the user the steps needed to play the game with also a button to take the user to the game.
 
 Navigation Bar
 
@@ -29,7 +29,7 @@ The footer section includes links to the relevant social media sites for the gam
 
 Game
 
-The game page includes the game which will have 12 cards displayed in the middle of the page. At the bottom of the page there is a restart button for the user to press to start the game again. This will restart the score and moves from the score board also. The score board will be displayed on the right of the game. This will entail a score and moves counter which will increase once the game has begun. 
+The game page includes the game which will have 12 cards displayed in the middle of the page. At the bottom of the page there is a restart button for the user to press to start the game again. This will restart the moves from the score board also. The score board will be displayed on the right of the game. This will entail a moves counter which will increase once the game has begun. 
 
 Instructions
 
@@ -37,8 +37,6 @@ The instruction page will have all the instructions in number order for the user
 
 
 Features Left to Implement
-
-My buttons are not where i would like them on the page. I wanted them at the bottom under the game page.
 
 
 
