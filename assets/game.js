@@ -43,7 +43,7 @@ function startGame() {
             // <img id="0-0" class="card" src="astro.webp">
             let card = document.createElement("img");
             card.id = r.toString() + "-" + c.toString();
-            card.src = cardImg + ".webp";
+            card.src = cardImg + ".jpg";
             card.classList.add("card");
             document.getElementById("board").append(card);
 
@@ -59,7 +59,7 @@ function hideCards() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             let card = document.getElementById(r.toString() + "-" + c.toString());
-            card.src = "background1.webp";
+            card.src = "back.jpg";
         }
     }
 }
