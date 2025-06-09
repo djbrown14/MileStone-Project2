@@ -17,6 +17,7 @@ body {
     /* Generic project styles */
     font-family: "Iceberg", static;
     color: white;
+    text-align: center;
 }
 
 /* Header */
@@ -103,13 +104,6 @@ p {
     padding: 20px;
 }
 
-.start-game {
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
 /* Button on home page */
 .play {
     background-color: rgb(55, 55, 243);
@@ -130,93 +124,20 @@ p {
     color: white;
 }
 
-/* Score board */
-.score-board {
-    display: flex;
-    justify-content: space-around;
-    height: 90%;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(55, 55, 243, 0.8);
-    top: 10%;
-}
-
 /* Game section */
-.memory-game {
-    width: 600px;
-    height: 600px;
-    margin: 20px;
+#board {
+    height: 450px;
+    width: 450px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-}
-
-.game-container {
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-rows: 125px 125px 125px;
-    grid-template-columns: 140px 140px 140px 140px;
-    grid-gap: 15px;
-    place-items: center;
+    background-color: rgba(55, 55, 243, 0.8);
 }
 
 .card {
-    justify-items: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-
-.back-face {
-    position: absolute;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-
-.front-face {
-    height: 125px;
-    width: 125px;
-    transform: rotateY(90deg); 
-    transition: all ease-in 0.25s;
-}
-
-/* Button */
-.restart-button {
-    background-color: rgb(55, 55, 243);
-    color: #ffffff;
-    padding: 10px;
-    font-size: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    left: 40%;
-}
-
-.restart-button:hover {
-    background-color: rgba(55, 55, 243, 0.8);
-    color: white;
-}
-
-/* Dynamic classes that are being added by JavaScript */
-.toggled .front-face { 
-    transform: rotateY(180deg); 
-} 
-
-.item .back-face { 
-    transition: all ease-in 0.25s; 
-    transition-delay: 0.25s; 
-} 
-  
-.toggled .back-face { 
-    transform: rotateY(90deg); 
-    transition-delay: 0s; 
+    height: 120px;
+    width: 90px;
+    margin: 5px;
 }
 
 /* Instruction page */
@@ -233,17 +154,6 @@ p {
     padding: 20px;
     margin: 20px auto;
     right: 30%;;
-}
-
-.restart {
-    background-color: rgb(55, 55, 243);
-    color: #ffffff;
-    padding: 10px;
-    font-size: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    bottom: 50%;
-    left: 40%;
 }
 
 /* Footer */
@@ -287,12 +197,6 @@ p {
     .score-board {
         width: 50%;
         height: 50%;
-    }
-
-    #social-networks i {
-        font-size: 160%; 
-        padding: 5%;
-        color: white;
     }
 } 
  
