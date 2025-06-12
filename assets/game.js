@@ -1,65 +1,58 @@
-let moves = 0;
-let cardList = [
-    "astro",
-    "baymax",
-    "bumblebee",
-    "r2d2",
-    "wall-e",
-    "wild-robot",
-]
+  const cards = document.querySelectorAll('.memory-card');
 
-let cardSet;
-let board = [];
-let rows = 4;
-let columns = 3;
+  let hasFlippedCard = false;
+  let lockBoard = false;
+  let [firstCard, ], secondCard;
 
-window.onload = function() {
-    shuffleCards();
-    startGame();
-}
+  function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
 
-function shuffleCards() {
-    cardSet = cardList.concat(cardList); //two of each card
-    console.log(cardSet);
-    //shuffle
-    for (let i = 0; i < cardSet.length; i++) {
-        let j = Math.floor(Math.random() * cardSet.length); // get random cards
-        //swap
-        let temp = cardSet[i];
-        cardSet[i] = cardSet[j];
-        cardSet[j] = temp;
-    }
-    console.log(cardSet);
-}
+    this.classList.add('flip');
 
-function startGame() {
-    //arrange the board 4x3
-    for (let r = 0; r < rows; r++) {
-        let row = [];
-        for (let c = 0; c < columns; c++) {
-            let cardImg = cardSet.pop();
-            row.push(cardImg); //JS
-
-            // <img id="0-0" class="card" src="astro.webp">
-            let card = document.createElement("img");
-            card.id = r.toString() + "-" + c.toString();
-            card.src = cardImg + ".jpg";
-            card.classList.add("card");
-            document.getElementById("board").append(card);
-
-        }
-        board.push(row);
+    if (!hasFlippedCard) {
+      hasFlippedCard = true;
+      firstCard = this;
+      return;
     }
 
-    console.log(board);
+    secondCard = this;
+    lockBoard = true;
 
-}
+    checkForMatch();
+  }
 
-function hideCards() {
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            let card = document.getElementById(r.toString() + "-" + c.toString());
-            card.src = "back.jpg";
-        }
-    }
-}
+  function checkForMatch() {
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    isMatch ? disableCards() : unflipCards();
+  }
+
+  function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    resetBoard();
+  }
+
+  function unflipCards() {
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+
+      resetBoard();
+    }, 1500);
+  }
+
+  function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+  }
+
+ (function shuffle() {
+   cards.forEach(card => {
+     let ramdomPos = Math.floor(Math.random() * 12);
+     card.style.order = ramdomPos;
+   });
+ })();
+
+  cards.forEach(card => card.addEventListener('click', flipCard));
