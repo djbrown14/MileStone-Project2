@@ -129,18 +129,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .memory-game {
     width: 400px;
-    padding: 20px;
     border-radius: 10px;
-    row-gap: 15px;
     display: grid;
-    grid-template-rows: 125px 125px 125px 125px 125px;
-    grid-template-columns: 150px 150px 150px 150px;
-    grid-gap: 10px;
+    grid-template-rows: 125px 125px 125px;
+    grid-template-columns: 150px 150px 150px;
     place-items: center;
 }
 
@@ -175,35 +171,19 @@ p {
 }
 
 /* Dynamic classes that are being added by JavaScript */
-.toggled .card-image { 
+.toggled .front-face { 
     transform: rotateY(0deg); 
     transition-delay: 0.25s; 
 } 
 
-.item .outline-image { 
+.item .back-face { 
     transition: all ease-in 0.25s; 
     transition-delay: 0.25s; 
 } 
   
-.toggled .outline-image { 
+.toggled .back-face { 
     transform: rotateY(90deg); 
     transition-delay: 0s; 
-}
-
-/* Button */
-.restart-button {
-    padding: 10px;
-    background-color: rgb(55, 55, 243);
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.restart-button:hover {
-    background-color: transparent;
-    border: 1px solid rgb(55, 55, 243);
-    color: rgb(55, 55, 243);
 }
 
 /* Instruction page */
