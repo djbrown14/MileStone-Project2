@@ -125,36 +125,85 @@ p {
 }
 
 /* Game section */
-.memory-game {
-    width: 640px;
-    height: 640px;
-    margin: auto;
+.game-container {
     display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.memory-game {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    row-gap: 15px;
+    display: grid;
+    grid-template-rows: 125px 125px 125px 125px 125px;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-gap: 10px;
+    place-items: center;
 }
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 2.5px;
+    justify-items: center;
+    display: flex;
+    align-items: center;
     position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
+    cursor: pointer;
 }
 
-.front-face,
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
 .back-face {
-    width: 100%;
-    height: 100%;
     position: absolute;
-    border-radius: 5px;
-    backface-visibility: hidden;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
 }
 
 .front-face {
-    transform: rotateY(180deg);
+    height: 125px;
+    width: 125px;
+    transform: rotateY(90deg); 
+    transition: all ease-in 0.25s;
+    mix-blend-mode: multiply;
+}
+
+/* Dynamic classes that are being added by JavaScript */
+.toggled .card-image { 
+    transform: rotateY(0deg); 
+    transition-delay: 0.25s; 
+} 
+
+.item .outline-image { 
+    transition: all ease-in 0.25s; 
+    transition-delay: 0.25s; 
+} 
+  
+.toggled .outline-image { 
+    transform: rotateY(90deg); 
+    transition-delay: 0s; 
+}
+
+/* Button */
+.restart-button {
+    padding: 10px;
+    background-color: rgb(55, 55, 243);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(55, 55, 243);
+    color: rgb(55, 55, 243);
 }
 
 /* Instruction page */

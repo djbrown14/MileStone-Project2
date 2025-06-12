@@ -31,88 +31,92 @@
         </header>
     <!-- Main Content -->
     <main>
-        <h2>Moves: <span id="moves">0</span></h2>
+        <div class="move-counter">Moves: 0</div>
+                <button id="restart" class="restart-button">
+                      Restart Game
+                  </button>
+        <div class="game-container"></div>    
         <section class="memory-game">
-            <div class="memory-card" data-framework="astro">
-                <img class="front-face" src="assets/images/astro.webp" alt="Astro">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="1" src="assets/images/astro.webp" alt="astro" class="front-face">
             </div>
-            <div class="memory-card" data-framework="astro">
-                <img class="front-face" src="assets/images/astro.webp" alt="Astro">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="2" src="assets/images/atom.webp" alt="atom" class="front-face">
             </div>
-            <div class="memory-card" data-framework="atom">
-                <img class="front-face" src="assets/images/atom.webp" alt="Atom">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="3" src="assets/images/baymax.webp" alt="baymax" class="front-face">
             </div>
-            <div class="memory-card" data-framework="atom">
-                <img class="front-face" src="assets/images/atom.webp" alt="Atom">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="4" src="assets/images/bumblebee.webp" alt="bumblebee" class="front-face">
             </div>
-            <div class="memory-card" data-framework="baymax">
-                <img class="front-face" src="assets/images/baymax.webp" alt="Baymax">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="5" src="assets/images/clank.webp" alt="clank" class="front-face">
             </div>
-            <div class="memory-card" data-framework="baymax">
-                <img class="front-face" src="assets/images/baymax.webp" alt="Baymax">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="6" src="assets/images/gipsy-danger.webp" alt="gipsy-danger" class="front-face">
             </div>
-            <div class="memory-card" data-framework="bumblebee">
-                <img class="front-face" src="assets/images/bumblebee.webp" alt="Bumblebee">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="7" src="assets/images/r2d2.webp" alt="r2d2" class="front-face">
             </div>
-            <div class="memory-card" data-framework="bumblebee">
-                <img class="front-face" src="assets/images/bumblebee.webp" alt="Bumblebee">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="8" src="assets/images/rodney.webp" alt="rodney" class="front-face">
             </div>
-            <div class="memory-card" data-framework="clank">
-                <img class="front-face" src="assets/images/clank.webp" alt="Clank">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="9" src="assets/images/wall-e.webp" alt="wall-e" class="front-face">
             </div>
-            <div class="memory-card" data-framework="clank">
-                <img class="front-face" src="assets/images/clank.webp" alt="Clank">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="10" src="assets/images/wild-robot.webp" alt="wild-robot" class="front-face">
+            </div> 
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="11" src="assets/images/astro.webp" alt="astro" class="front-face">
             </div>
-            <div class="memory-card" data-framework="gipsy-danger">
-                <img class="front-face" src="assets/images/gipsy-danger.webp" alt="Gipsy-danger">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="12" src="assets/images/atom.webp" alt="atom" class="front-face">
             </div>
-            <div class="memory-card" data-framework="gipsy-danger">
-                <img class="front-face" src="assets/images/gipsy-danger.webp" alt="Gipsy-danger">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="13" src="assets/images/baymax.webp" alt="baymax" class="front-face">
             </div>
-            <div class="memory-card" data-framework="r2d2">
-                <img class="front-face" src="assets/images/r2d2.webp" alt="R2d2">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="14" src="assets/images/bumblebee.webp" alt="bumblebee" class="front-face">
             </div>
-            <div class="memory-card" data-framework="r2d2">
-                <img class="front-face" src="assets/images/r2d2.webp" alt="R2d2">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="15" src="assets/images/clank.webp" alt="clank" class="front-face">
             </div>
-            <div class="memory-card" data-framework="rodney">
-                <img class="front-face" src="assets/images/rodney.webp" alt="Rodney">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="16" src="assets/images/gipsy-danger.webp" alt="gipsy-danger" class="front-face">
             </div>
-            <div class="memory-card" data-framework="rodney">
-                <img class="front-face" src="assets/images/rodney.webp" alt="Rodney">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="17" src="assets/images/r2d2.webp" alt="r2d2" class="front-face">
             </div>
-            <div class="memory-card" data-framework="wall-e">
-                <img class="front-face" src="assets/images/wall-e.webp" alt="Wall-e">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="18" src="assets/images/rodney.webp" alt="rodney" class="front-face">
             </div>
-            <div class="memory-card" data-framework="wall-e">
-                <img class="front-face" src="assets/images/wall-e.webp" alt="Wall-e">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="19" src="assets/images/wall-e.webp" alt="wall-e" class="front-face">
             </div>
-            <div class="memory-card" data-framework="wild-robot">
-                <img class="front-face" src="assets/images/wild-robot.webp" alt="Wild-robot">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
-            <div class="memory-card" data-framework="wild-robot">
-                <img class="front-face" src="assets/images/wild-robot.webp" alt="Wild-robot">
-                <img class="back-face" src="assets/images/background1.webp" alt="Memory Card">
-            </div>
+            <div class="memory-card">
+                <img src="assets/images/background1.webp" class="back-face">
+                <img id="20" src="assets/images/wild-robot.webp" alt="wild-robot" class="front-face">
+            </div>   
         </section>
     </main>
 
